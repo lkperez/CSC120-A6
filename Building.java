@@ -1,7 +1,9 @@
-public class Building {
+import java.util.ArrayList;
+import java.util.Hashtable;
 
-    private String name = "<Name Unknown>";
-    private String address = "<Address Unknown>";
+public class Building {
+    protected String name = "<Name Unknown>";
+    protected String address = "<Address Unknown>";
     private int nFloors = 1;
 
     public Building(String name, String address, int nFloors) {
@@ -11,6 +13,15 @@ public class Building {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
         this.nFloors = nFloors;
+    }
+
+    public Building(ArrayList<String> residents, boolean hasDiningRoom) {
+    }
+
+    public Building(Hashtable<String, Boolean> collection) {
+    }
+
+    public Building(int nCoffeeOunces, int nSugarPackets, int nCreams, int ncups) {
     }
 
     public String getName() {
