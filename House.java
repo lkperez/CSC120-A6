@@ -10,20 +10,20 @@ import java.util.ArrayList;
 public class House extends Building {
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
-  
 
-  public House(ArrayList<String> residents, boolean hasDiningRoom) {
-    super(residents, hasDiningRoom);
-    residents = new ArrayList<String>();
+  public House(String name, String address, int nFloors, boolean hasDiningRoom) {
+    super(name, address, nFloors);
+    this.hasDiningRoom = hasDiningRoom;
+    this.residents = new ArrayList<String>();
     System.out.println("You have built a house: 🏠");
   }
 
-  public boolean getHasDiningRoom(){
+  public boolean hasDiningRoom(){
     return this.hasDiningRoom;
   }
 
-  public ArrayList<String> nResidents(){
-    return this.residents;
+  public int nResidents(){
+    return this.residents.size();
   }
 /** 
    *  Updates the resident's list when someone moves in
@@ -31,33 +31,31 @@ public class House extends Building {
    *  @return the name of the resident that moved in the house  
    */
   public void moveIn(String name){
-    residents.add(name);
-    System.out.println(name);
+    this.residents.add(name);
   }
+
 /** 
    *  Updates the resident's list when someone moves out
    *  @param name resident's name
    *  @return the name of resident who moved out 
    */
   public String moveOut(String name){
-    residents.remove(name);
+    this.residents.remove(name);
     return name;
   }
+  
 /** 
    *  Check if a person lives in the house
    *  @param person person who is being checked if their in the house
    *  @return T/F: is the person a resident of the house?  
    */
   public boolean isResident(String person){
-    if (residents.contains(person)){
-      return true;
-    }else{
-      return false;
-    }
+    return (residents.contains(person));
   }
 
   public static void main(String[] args) {
-    new House();
+    House Wilder = new House("Wilder House", "1 Mandelle Road Northampton, MA 01063", 4, true);
+    System.out.println(Wilder);
   }
 
 }
