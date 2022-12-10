@@ -34,15 +34,15 @@ ___Yes__ 1 pt: The `Cafe` class includes the requested attributes
 
 ___Yes__ 1 pt: The `Cafe` class keeps the inventory up to date, based on sales
 
-___part__ 1 pt: The `Cafe` class uses the `restock(...)` method to avoid running out of inventory.
+___Yes__ 1 pt: The `Cafe` class uses the `restock(...)` method to avoid running out of inventory.
 
 
 
 ## General Items:
 
-___part__ 4 pts: Programs compile without errors or warnings
+___Yes__ 4 pts: Programs compile without errors or warnings
 
-___part__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___Yes__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 ___Yes__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
